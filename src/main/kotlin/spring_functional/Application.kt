@@ -21,7 +21,7 @@ fun main() {
                 }
             ).build())
         )
-        .bindUntilJavaShutdown(Duration.ofSeconds(5)) {
+        .bindUntilJavaShutdown(Duration.ofSeconds(1)) {
             logger.info("Instance ready")
         }
 }
