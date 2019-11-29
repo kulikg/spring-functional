@@ -1,0 +1,16 @@
+# example blocing operation
+curl -H "Content-Type: application/json" -X POST -d "{ \"ids\":[1, 2, 3] }" localhost:8080/
+
+# example background operation
+curl -H "Content-Type: application/json" -X POST -d "{ \"ids\":[1, 2, 3] }" localhost:8080/b
+
+
+# pub
+curl -H "Content-Type: application/json" -X POST -d "{ \"content\":\"hello\" }" localhost:8080/p
+
+# sub
+curl -H "Content-Type: application/json" localhost:8080/s
+
+# all
+time curl -H "Content-Type: application/json" localhost:8080/a
+
