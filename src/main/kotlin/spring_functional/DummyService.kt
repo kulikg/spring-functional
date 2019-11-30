@@ -23,12 +23,12 @@ class DummyService {
         .map { Response(it) }
 
     /*
-        Reuse the the same mono instance to avoid memory leaks when the request is empty
+        Return the the same mono instance
      */
     fun all(emptyRequest: Mono<Void>) :Mono<Response> = emptyRequest.thenReturn ( Response(repository.values.toList()) )
 
     /*
-        Forking blocking operation, and detach the client as soon as possible
+        Forking blocking operation, and detach the client
      */
     fun background(request: Mono<Request>): Mono<Response> =
         request
