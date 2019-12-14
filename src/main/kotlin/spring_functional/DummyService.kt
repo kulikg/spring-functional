@@ -23,7 +23,7 @@ class DummyService {
         .map { Response(it) }
 
     /*
-        Return the the same mono instance
+        Return the same mono instance
      */
     fun all(emptyRequest: Mono<Void>) :Mono<Response> = emptyRequest.thenReturn ( Response(repository.values.toList()) )
 
