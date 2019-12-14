@@ -14,4 +14,8 @@
 - which operator/transformator to use?
 > https://projectreactor.io/docs/core/release/reference/index.html#which.values
 
+- which rule to keep?
+> https://github.com/reactive-streams/reactive-streams-jvm
+
+
 
